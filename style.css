@@ -492,6 +492,11 @@ justify-content: space-between;
 
  
 }
+.bubble h3{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: .2rem;
+}
 
 
 /* ========CONTACT FORM=============== */
