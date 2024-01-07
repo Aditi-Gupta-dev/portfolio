@@ -187,12 +187,15 @@ body{
     margin-top:100px ;
     /* border: 2px solid #fff; 
     */
+    animation: rightslide 1s forwards;
+    transition: all 1s ease-in;
 }
 .hero-img img{
     width: 300px;   
     height: 300px;
-    border-radius: 50%;
+    border-radius: 12%;
     box-shadow: 0px 0px 1000px 1px rgb(95, 158, 160);
+    object-fit: cover;
     
 }
 
@@ -215,6 +218,7 @@ body{
     
     padding:10px;
     position: relative;
+    margin-top: 100px;
 
 }
 
@@ -632,19 +636,24 @@ width: 100%;
 }
 
 
-/* ===================================== */
 
-@media(max-width:769px){
-    html{
-        font-size:62%;
-    }
-}
 
 /* ================animations============ */
 
 @keyframes sideleft {
     0%{
         transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+
+    }
+}
+@keyframes rightslide {
+    0%{
+        transform: translateX(100px);
         opacity: 0;
     }
     100%{
@@ -719,7 +728,7 @@ width: 100%;
 /* ==================MEDIA QUERIES============ */
 
 
-@media(max-width:727px) {
+@media(max-width:768px) {
 
      html{
         font-size:62%;
@@ -733,70 +742,100 @@ width: 100%;
         display:block;
         
     }
-    .navbar .navbar-items{
-        padding-top:50px;
-        background-color:#fff ;
-        height:80vh;
-        max-width:300px;
-        display:flex;
-        flex-direction: column;
-        margin-left:-40px;
-        padding-left:60px;
-        transform:translate(-150%);
-        transition:transform 0.4s ease-in-out;
-        box-shadow :5px 0px 10px 0px #aaa;
-        
-    }
-    .navbar .navbar-items .nav-item{
-        margin-bottom:3rem;
-        font: size 2rem;
-        font-weight: 500;
-        margin-right: 100px;
-        margin-left:0;
-    }
-    .logo{
-        position:absolute;
-        font-size: 3rem;
-        top:10px;
-        left:25px;
-    }
-    .navbar-container input[type='checkbox'],
-    .navbar-container .fa-bars{
-    display:block;
-}
-    .navbar-container input[type='checkbox']{
-        position:absolute;
-        display:block;
-        height:32px;
-        width:40px;
-        top:20px;
-        left: 20px;
-        z-index: 5;
-        opacity: 0;
-    }
-    .navbar-container .fa-bars{
-        display:block;
-        height: 32px;
-        width: 40px;
-        position:absolute;
-        top: 2px;
-        left:230px;
-        z-index: 2;
-
-    }
-    .navbar-container input[type='checkbox']:checked~.navbar-items{
-        transform:translateX(0);  
-    }
-    .navbar-container input[type='checkbox']:checked~.fa-bars{
-        top:2px;
-        left:230px;
-    }
-   
+    
     
     .hero-img img{
         width: 200px;   
         height: 200px;
     }
+    #skills{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap:1rem;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    .left-skills{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid grey; */
+    }
+
+    .skill-cards{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1px;
+    
+    }
+    .card{
+        width: 250px;
+           
+    }
+    
+    
+    .box3{
+        margin-left: 35%;
+    }
+    
+   .right-skill{
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+   }
+    .bubbles{
+        margin:0;
+        flex-wrap: wrap;    
+        width: 100%;
+        
+    }
+    .bubble img{
+     height: 40px;
+     width: 40px;    
+    }
+
+    /* ====PORTFOLIO===== */
+    #portfolio{
+        margin-top:50px;
+        padding:50px 0;
+    }
+    
+    .portfolio-type{
+        margin:0;
+        width:30%;
+        margin:.5rem .5rem;
+    }
+    .portfolio-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:.5rem;
+    
+    }
+    .portfolio-container img{
+        display:block;
+        width:80%;
+        margin:auto;
+        max-height: 150px;
+        object-fit:cover;
+        object-position:center;
+    }
+    .portfolio-img-container{
+        width:100%;
+        height: 150px;
+    }
+    #contact{
+       
+        margin-top: 100px;
+    }
+    
+   
+}
+@media(max-width:855px){
     #skills{
         height: 500px;
         display: flex;
@@ -846,43 +885,6 @@ width: 100%;
      height: 40px;
      width: 40px;    
     }
-
-    /* ====PORTFOLIO===== */
-    #portfolio{
-        margin-top:50px;
-        padding:50px 0;
-    }
-    
-    .portfolio-type{
-        margin:0;
-        width:40%;
-        margin:2rem auto;
-    }
-    .portfolio-container{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap:1rem;
-    
-    }
-    .portfolio-container img{
-        display:block;
-        width:80%;
-        margin:auto;
-        max-height: 150px;
-        object-fit:cover;
-        object-position:center;
-    }
-    .portfolio-img-container{
-        width:90%;
-        height: 150px;
-    }
-    #contact{
-       
-        margin-top: 100px;
-    }
-    
-   
 }
 @media(max-width:555px){
     .logo{
