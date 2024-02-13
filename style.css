@@ -407,34 +407,38 @@ body{
     margin-bottom:2rem;
 }
 #skills{
-    /* border:2px solid green; */
-    height: 450px;
+    border:2px solid red;
+    height:auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap:1rem;
-    margin-top: 150px;
+    /* gap:1rem; */
+    margin-top: 50px;
     margin-bottom: 10px;
 }
 .left-skills{
 height: 100%;
-width: 60%;
-/* border: 1px solid grey; */
+width: 40%;
+border: 1px solid grey;
+margin:auto 1rem; 
 }
 .skill-cards{
 height: 100%;
-/* border:2px solid blue; */
+border:2px solid blue;
 display: flex;
+flex-wrap: wrap;
 flex-direction: column;
 justify-content: space-between;
 }
 .card{
-    width: 50%;
-    border-radius: 10px;
-    padding:0px 10px;
+    width: 250px;height:150px;
+    border-radius: 10px 20px  ;
+    padding:0px 25px;
     margin:2%;
     box-shadow: rgb(95, 158, 160)0px 2px 5px -1px, rgb(95, 158, 160) 0px 1px 3px -1px;
     border: none;
     border-bottom: 4px solid cadetblue;
+    border-left: 4px solid cadetblue;
 
     animation: rise 8s infinite ease-in-out;
     animation-duration: calc(2s*var(--i));
@@ -442,7 +446,7 @@ justify-content: space-between;
 
 }
 .box2{
-    margin-left: 30%;
+    margin-left:100px;
 }
 .box1 h2,.box2 h2,.box3 h2{
     font-size: 1rem;
@@ -453,9 +457,10 @@ justify-content: space-between;
 
 .frontend,.others,.ui{
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
     gap:1rem;
     margin-top: .6rem;
     padding: .5rem;
@@ -473,40 +478,46 @@ justify-content: space-between;
 
 }
 .right-skill{
-    /* border:2px solid green; */
-
-    width: 50%;
+    border:2px solid green;
+    height: 100%;
+    margin:auto 0;
+    width: 55%;
 }
 .bubbles{
-    margin: 30px 20px ;
+    margin: 10px 10px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap:2.5rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
+    /* border:2px solid pink; */
     
+}
+.bubble{
+    margin:1rem;
+    /* border: 1px solid yellow; */
+    text-align: center;
 }
 .bubble img:hover{
     transform: scale(1.1);
-    /* color:#aaa; */ 
     box-shadow: 0px 0px 70px 20px rgb(95, 158, 160);
-
 }
+
 .bubble img{
  border-radius: 50%;
  height: 50px;
  width: 50px;
  margin:auto;
+ object-fit: cover; 
  background-repeat: no-repeat;
  border:2px solid cadetblue;
  box-shadow: 0px 0px 700px 10px rgb(95, 158, 160);
- object-fit: cover; 
 }
 .bubble h3{
     font-size: 1rem;
     text-align: center;
     margin-top: .2rem;
+    font-weight: 500;
 }
 
 
@@ -515,7 +526,7 @@ justify-content: space-between;
 #contact{
     padding:50px 0;
     background:#00000020;
-    margin-top: 200px;
+    margin-top: 20%;
 }
 .contact-container{
 display: flex;
