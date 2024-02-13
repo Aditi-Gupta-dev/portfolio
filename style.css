@@ -419,7 +419,7 @@ body{
 .left-skills{
 height: 100%;
 width: 40%;
-border: 1px solid grey;
+/* border: 1px solid grey; */
 margin:auto 1rem; 
 }
 .skill-cards{
