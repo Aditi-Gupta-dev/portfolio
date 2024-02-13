@@ -407,7 +407,7 @@ body{
     margin-bottom:2rem;
 }
 #skills{
-    border:2px solid red;
+    /* border:2px solid red; */
     height:auto;
     display: flex;
     flex-wrap: wrap;
@@ -424,7 +424,7 @@ margin:auto 1rem;
 }
 .skill-cards{
 height: 100%;
-border:2px solid blue;
+/* border:2px solid blue; */
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
@@ -478,7 +478,7 @@ justify-content: space-between;
 
 }
 .right-skill{
-    border:2px solid green;
+    /* border:2px solid green; */
     height: 100%;
     margin:auto 0;
     width: 55%;
